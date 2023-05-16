@@ -9,7 +9,7 @@ public class Square {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Enter a number :");
 		int n = s.nextInt(); // read an int
-		System.out.println(n * n);
+		System.out.printf("Square of %d is %d", n, n * n);
 	}
 
 }
