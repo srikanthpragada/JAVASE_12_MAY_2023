@@ -6,7 +6,7 @@ public class Product {
     private double price;
     
     // Methods 
-    public void init(String n, double p) {
+    public Product(String n, double p) {
     	name = n;
     	price = p;
     }
