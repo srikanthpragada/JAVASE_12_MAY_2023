@@ -5,7 +5,16 @@ public class SavingsAccount {
 	private int acno;
 	private String ahname;
 	private int balance;
-
+	private static int minbal = 10000;
+	
+	public static int getMinbal() {
+		return SavingsAccount.minbal;
+	}
+	
+	public static void setMinbal(int minbal) {
+		SavingsAccount.minbal = minbal;
+	}
+	
 	// constructor
 	public SavingsAccount(int acno, String ahname) {
 		this.acno = acno;
@@ -32,6 +41,10 @@ public class SavingsAccount {
 	}
 
 	public void withdraw(int amount) {
-		this.balance -= amount;
+		if (this.balance - SavingsAccount.minbal >= amount)
+			 this.balance -= amount;
+		else
+			 System.out.println("Insufficient Balance");
+		
 	}
 }
