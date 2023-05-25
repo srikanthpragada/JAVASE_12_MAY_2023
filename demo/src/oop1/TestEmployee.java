@@ -42,8 +42,25 @@ class Manager extends Employee {
 public class TestEmployee {
 
 	public static void main(String[] args) {
+		 Employee e = new Employee("Jack", 50000);
 		 Manager m = new Manager("Scott", 100000, 30000);
-		 m.print();
+		 
+		 // e = m; // upcasting 
+		 
+		 if (e instanceof Manager) 
+		    m = (Manager) e;  // downcasting 
+	 
+		 if (e instanceof Manager man)
+		 {
+			 
+		 }
+
 	}
 
 }
+
+
+
+
+
+
