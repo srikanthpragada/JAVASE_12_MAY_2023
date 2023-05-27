@@ -43,18 +43,13 @@ public class TestEmployee {
 
 	public static void main(String[] args) {
 		 Employee e = new Employee("Jack", 50000);
-		 Manager m = new Manager("Scott", 100000, 30000);
+		 e.print();  // runtime polymorphism 
+		 System.out.println(e.getSalary());
 		 
-		 // e = m; // upcasting 
+		 e = new Manager("Scott", 100000, 30000);
+		 e.print();  // runtime polymorphism
+		 System.out.println(e.getSalary());
 		 
-		 if (e instanceof Manager) 
-		    m = (Manager) e;  // downcasting 
-	 
-		 if (e instanceof Manager man)
-		 {
-			 
-		 }
-
 	}
 
 }
