@@ -1,5 +1,7 @@
 package oop1;
 
+import java.util.Objects;
+
 public class Rect {
 	private int length, width;
 
@@ -27,6 +29,23 @@ public class Rect {
 	public void setWidth(int width) {
 		this.width = width;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Rect [length=" + length + ", width=" + width + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return length + width;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Rect other)
+			return length == other.length && width == other.width;
+		else
+			return false;
+	}
+
 }
