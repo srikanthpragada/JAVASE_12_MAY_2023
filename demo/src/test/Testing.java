@@ -9,6 +9,10 @@ public class Testing {
 		 orders.Customer cust; // fully qualified classname 
 		 // orders.Payment p;
 		 
+		 // Book b;
+		 
+		 System.out.println("Hello!");
+		 
 	}
 
 }
