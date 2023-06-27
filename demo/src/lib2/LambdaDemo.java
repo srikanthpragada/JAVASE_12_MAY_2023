@@ -7,6 +7,12 @@ class MyTask implements Runnable {
 }
 
 public class LambdaDemo {
+
+	public static void print() {
+		for (int i = 10; i <= 15; i++)
+			System.out.println(i);
+	}
+
 	public static void main(String[] args) {
 		var t1 = new Thread(new MyTask());
 		t1.start();
@@ -32,6 +38,9 @@ public class LambdaDemo {
 		});
 		t4.start();
 
-	}
+		// Method reference
+		var t5 = new Thread(LambdaDemo::print);
 
+		t5.start();
+	}
 }
