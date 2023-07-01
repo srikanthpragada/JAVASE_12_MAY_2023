@@ -10,7 +10,6 @@ class PrintValue implements Consumer<String> {
 }
 
 public class StreamDemo1 {
-
 	public static void main(String[] args) {
 		 String [] names = 
 			 {"Joe", "Andy", "Mark", "Scott", "James", "Joe", "Scott", "Richards"};
